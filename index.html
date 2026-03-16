@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="header">Customer Segmentation</h2>
+    <table id="customerTable">
+        <tr>
+            <th>User Name</th>
+            <th>Total Purchases</th>
+            <th>Lifetime Value</th>
+            <th>Customer Segment</th>
+        </tr>
+    </table>
+
+    <h2 class="header">Churned Customers</h2>
+    <table id="churnTable">
+        <tr>
+            <th>User Name</th>
+            <th>Days Since Last Order</th>
+            <th>Churn Status</th>
+        </tr>
+    </table>
+
+    <script>
+        var data = [
+            {"user_name": "User 1", "total_purchases": 10, "lifetime_value": 1000, "customer_segment": "VIP"},
+            {"user_name": "User 2", "total_purchases": 15, "lifetime_value": 1500, "customer_segment": "Standard"},
+            // Add more data here...
+        ];
+
+        var churnData = [
+            {"user_name": "User 1", "days_since_last_order": 100, "churn_status": "Churned"},
+            {"user_name": "User 2", "days_since_last_order": 182, "churn_status": "Churned"},
+            // Add more data here...
+        ];
+
+        var customerTable = document.getElementById("customerTable");
+        data.forEach(function(item) {
+            var row = customerTable.insertRow();
+            row.insertCell().innerText = item.user_name;
+            row.insertCell().innerText = item.total_purchases;
+            row.insertCell().innerText = item.lifetime_value;
+            row.insertCell().innerText = item.customer_segment;
+        });
+
+        var churnTable = document.getElementById("churnTable");
+        churnData.forEach(function(item) {
+            var row = churnTable.insertRow();
+            row.insertCell().innerText = item.user_name;
+            row.insertCell().innerText = item.days_since_last_order;
+            row.insertCell().innerText = item.churn_status;
+        });
+    </script>
+</body>
+</html>
