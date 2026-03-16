@@ -1,0 +1,6 @@
+log_id,user_id,user_name,purchase_date,item_id,item_name,price,status
+101,1,John Doe,2023-01-15,A1,Laptop,1200.00,COMPLETED
+102,2,Jane Smith,02/20/2023,B2,Mouse,25.50,COMPLETED
+103,1,John doe,,A1,Laptop,1200.00,FAILED
+104,3,Alice J.,2023-03-05,C3,Keyboard,NULL,COMPLETED
+105,1,John Doe,2023-08-10,B2,Mouse,25.50,COMPLETED
